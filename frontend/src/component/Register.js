@@ -52,7 +52,7 @@ function Register() {
                   name="name"
                   value={name}
                   onChange={handleInputChange}
-                  className="p-2 border rounded"
+                  className="input-field"
                   required
                 />
                 <label>Email</label>
@@ -61,7 +61,7 @@ function Register() {
                   name="email"
                   value={email}
                   onChange={handleInputChange}
-                  className="p-2 border rounded"
+                  className="input-field"
                   required
                 />
                 <label>Password</label>
@@ -70,7 +70,7 @@ function Register() {
                   name="password"
                   value={password}
                   onChange={handleInputChange}
-                  className="p-2 border rounded"
+                  className="input-field"
                   required
                 />
                 <label>Confirm Password</label>
@@ -102,7 +102,7 @@ function Register() {
                   name="email"
                   value={email}
                   onChange={handleInputChange}
-                  className="p-2 border rounded"
+                  className="input-field"
                   required
                 />
                 <label>Password</label>
@@ -111,7 +111,7 @@ function Register() {
                   name="password"
                   value={password}
                   onChange={handleInputChange}
-                  className="p-2 border rounded"
+                  className="input-field"
                   required
                 />
                 <button type="submit" className="btn">

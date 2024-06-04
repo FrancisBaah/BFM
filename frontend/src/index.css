@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-input {
+.input-field {
   height: 40px;
   top: 64px;
   gap: 0px;
