@@ -79,7 +79,7 @@ function Register() {
                   name="confirmPassword"
                   value={confirmPassword}
                   onChange={handleInputChange}
-                  className="p-2 mb-2 border rounded"
+                  className="p-2 mb-2 input-field"
                   required
                 />
                 <button type="submit" className="btn">
