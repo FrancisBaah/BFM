@@ -48,13 +48,18 @@ label {
   text-align: left;
 }
 
-.btn {
+.btn,
+.no-bg-btn {
   background: #128cfc;
   height: Hug (40px) px;
   padding: 10px 31px;
   border-radius: 10px;
   opacity: 0px;
   color: white;
+}
+.no-bg-btn {
+  background: transparent;
+  border: 1px solid blue;
 }
 
 @media (max-width: 768px) {

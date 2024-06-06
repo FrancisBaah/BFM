@@ -1,13 +1,26 @@
+import { Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Register from "./component/Register";
+import Dashboard from "./component/Dashboard";
+import Welcome from "./component/Welcome";
+import Sidebar from "./component/Sidebar";
 
 function App() {
   return (
-    <div className="h-full w-full">
-      <header className=""></header>
-      <main className="w-full h-full">
-        <Register />
-      </main>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/sign" element={<Register />} />
+        <Route
+          path="/Dashboard"
+          element={
+            <Sidebar>
+              <Dashboard />
+            </Sidebar>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { PostAPI } from "./api/API_CALL";
 
 function Register() {
   const [signUpOrIn, setSignupOrIn] = useState("login");
@@ -17,10 +18,33 @@ function Register() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmitRegister = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
+    const headers = "'Content-Type': 'application/json'";
+    const data = JSON.stringify({
+      name: name,
+      email: email,
+      password: password,
+    });
+    try {
+      const url = "";
+      const res = await PostAPI(url, data, headers);
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const headers = "'Content-Type': 'application/json'";
+    const data = JSON.stringify(formData);
+    try {
+      const url = "";
+      // const res = await PostAPI(url, data, headers);
+      // console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -42,7 +66,7 @@ function Register() {
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
-                onSubmit={handleSubmit}
+                onSubmit={handleSubmitRegister}
                 className="flex flex-col"
               >
                 <h1 className="title">Register Here</h1>
